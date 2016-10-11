@@ -1,1 +1,24 @@
-<h1>Profile</h1>
+<h4>Menu</h4>
+<hr>
+
+<strong>Breakfast</strong>
+<ul>
+    <li *ngFor="let item of breakfastItems">
+    {{ item.productName }} | R{{ item.productPrice }}
+    </li>
+</ul>
+
+<strong>Lunch</strong>
+<ul>
+    <li *ngFor="let item of lunchItems">
+    {{ item.productName }} | R{{ item.productPrice }}
+    </li>
+</ul>
+
+
+<strong>Dinner</strong>
+<ul>
+    <li *ngFor="let item of dinnerItems">
+    {{ item.productName }} | R{{ item.productPrice }}
+    </li>
+</ul>
