@@ -9,33 +9,29 @@ import { MenuItemsService } from '../../services/menuItems/menuItems.service';
 })
 export class MenuComponent {
 
-    constructor(private _menuItemsService:MenuItemsService) {
-        console.log('GithubComponent init....');
-    }
-
    breakfastItems = [
         {
             productName: 'Breakfast Item 1',
-            productPrice: 23
+            productPrice: 3
         },
         {
             productName: 'Breakfast Item 2',
-            productPrice: 342
+            productPrice: 2
         },
         {
             productName: 'Breakfast Item 3',
-            productPrice: 42
+            productPrice: 2
         }
     ];
 
    lunchItems = [
         {
             productName: 'Lunch Item 1',
-            productPrice: 23
+            productPrice: 3
         },
         {
             productName: 'Lunch Item 2',
-            productPrice: 342
+            productPrice: 2
         }
     ];
 
@@ -48,7 +44,17 @@ export class MenuComponent {
             productName: 'Dinner Item 2',
             productPrice: 342
         }
-    ]
+    ];
+
+    total = 0;
+
+    addToCartFn(price:number) {
+        this.total = this.total + price;
+        console.log(this.total);
+    };
+    checkoutFn() {
+        
+    }
     
 }
 

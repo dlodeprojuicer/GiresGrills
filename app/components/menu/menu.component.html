@@ -3,14 +3,14 @@
 
 <strong>Breakfast</strong>
 <ul>
-    <li *ngFor="let item of breakfastItems">
+    <li *ngFor="let item of breakfastItems" (click)="addToCartFn(item.productPrice)">
     {{ item.productName }} | R{{ item.productPrice }}
     </li>
 </ul>
 
 <strong>Lunch</strong>
 <ul>
-    <li *ngFor="let item of lunchItems">
+    <li *ngFor="let item of lunchItems" (click)="addToCartFn(item.productPrice)">
     {{ item.productName }} | R{{ item.productPrice }}
     </li>
 </ul>
@@ -18,7 +18,13 @@
 
 <strong>Dinner</strong>
 <ul>
-    <li *ngFor="let item of dinnerItems">
+    <li *ngFor="let item of dinnerItems" (click)="addToCartFn(item.productPrice)">
     {{ item.productName }} | R{{ item.productPrice }}
     </li>
 </ul>
+
+<hr/>
+
+<strong>Total: R{{total}} </strong>
+
+<button type="button" class="btn btn-default" (onclick)="checkoutFn()">Checkout</button>
