@@ -52,9 +52,6 @@ export class MenuComponent {
         this.total = this.total + price;
         console.log(this.total);
     };
-    checkoutFn() {
-        
-    }
     
 }
 

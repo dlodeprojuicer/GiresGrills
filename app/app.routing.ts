@@ -5,6 +5,7 @@ import { HomeComponent }  from './components/home/home.component';
 import { MenuComponent }  from './components/menu/menu.component';
 import { OrdersComponent }  from './components/orders/orders.component';
 import { AccountComponent }  from './components/account/account.component';
+import { CheckoutComponent }  from './components/checkout/checkout.component';
 
 const appRoutes: Routes  = [
     {
@@ -22,6 +23,10 @@ const appRoutes: Routes  = [
     {
         path: "account",
         component: AccountComponent
+    },
+    {
+        path: "checkout",
+        component: CheckoutComponent
     }
 ]
 
