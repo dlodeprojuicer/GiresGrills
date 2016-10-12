@@ -47,8 +47,17 @@ export class MenuComponent {
     
     cartTotal:any = 0;
     checkoutArray:any = [];
-
-    addToCartFn(item:any) {
+    ab:boolean = false;
+    _checked:any = ""; 
+    addToCartFn(index:any,item:any) {
+        console.log("aaaaaa",index)
+        this.ab = !this.ab;
+        if (this.ab) {
+            this._checked = "text-warning";
+        } else {
+            this._checked = "";
+        }
+        console.log(this.ab, this._checked)
         this.cartTotal = this.cartTotal + item.productPrice;
         localStorage.setItem('cartTotal', this.cartTotal);
         this.checkoutArray.push(item);

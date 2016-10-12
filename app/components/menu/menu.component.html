@@ -3,7 +3,7 @@
 
 <strong>Breakfast</strong>
 <ul>
-    <li *ngFor="let item of breakfastItems" (click)="addToCartFn(item)">
+    <li *ngFor="let item of breakfastItems" (click)="addToCartFn($index,item)" class={{_checked}}>
     {{ item.productName }} | R{{ item.productPrice }}
     </li>
 </ul>
@@ -14,7 +14,6 @@
     {{ item.productName }} | R{{ item.productPrice }}
     </li>
 </ul>
-
 
 <strong>Dinner</strong>
 <ul>
