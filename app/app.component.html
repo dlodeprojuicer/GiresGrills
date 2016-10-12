@@ -25,7 +25,14 @@
     </nav>
 
     <div class="container">
-
-      <router-outlet></router-outlet>
-
+      <div class="col-md-12">
+        <router-outlet></router-outlet>
+      </div>
     </div><!-- /.container -->
+    <footer class="footer">
+        <ul class="footer-nav">
+          <li><a routerLink="/orders">Orders</a></li>
+          <li><a routerLink="/menu">Menu</a></li>
+          <li><a routerLink="/account">Account</a></li>
+        </ul>
+    </footer>
