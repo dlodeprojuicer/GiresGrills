@@ -46,10 +46,12 @@ export class MenuComponent {
     ];
     
     cartTotal:any = 0;
-    
-    addToCartFn(price:number) {
-        this.cartTotal = this.cartTotal + price;
-        console.log(this.cartTotal);
+    checkoutArray:any = [];
+
+    addToCartFn(item:any) {
+        this.cartTotal = this.cartTotal + item.productPrice;
         localStorage.setItem('cartTotal', this.cartTotal);
+        this.checkoutArray.push(item);
+        localStorage.setItem('checkoutArray',JSON.stringify(this.checkoutArray));
     };    
 }

@@ -12,6 +12,7 @@ export class CheckoutComponent {
     email:string;
     cell:string;
     checkoutFormObject:any;
+    checkoutDB:any;
 
     constructor() {
         this.cartTotal = localStorage.getItem('cartTotal');
@@ -23,7 +24,16 @@ export class CheckoutComponent {
             email: this.email,
             cell: this.cell
         };
-        console.log(this.checkoutFormObject);
-        localStorage.setItem('checkoutFormObject',this.checkoutFormObject);
+        
+        this.checkoutDB = {
+            selectedItems: localStorage.getItem('checkoutArray'),
+            checkoutFormObject: this.checkoutFormObject,
+            total: localStorage.getItem('cartTotal')
+        }
+
+        // DB
+        localStorage.setItem('checkoutDB',this.checkoutDB);
+
+        console.log(this.checkoutDB);
     }
 }
