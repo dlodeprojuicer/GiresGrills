@@ -5,4 +5,10 @@ import { Component } from '@angular/core';
     selector: 'checkout',
     templateUrl: 'checkout.component.html'
 })
-export class CheckoutComponent {}
+export class CheckoutComponent {
+    cartTotal:any;
+    total:any;
+    constructor() {
+        this.cartTotal = localStorage.getItem('cartTotal');
+    }
+}

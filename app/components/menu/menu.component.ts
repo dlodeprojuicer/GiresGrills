@@ -7,7 +7,7 @@ import { MenuItemsService } from '../../services/menuItems/menuItems.service';
     templateUrl: 'menu.component.html',
     providers: [MenuItemsService]
 })
-export class MenuComponent {
+export class MenuComponent {    
    breakfastItems = [
         {
             productName: 'Breakfast Item 1',
@@ -44,14 +44,12 @@ export class MenuComponent {
             productPrice: 342
         }
     ];
-
-    total = 0;
-
-    addToCartFn(price:number) {
-        this.total = this.total + price;
-        localStorage.setItem('cartTotal', "'"+this.total+"'" );
-        console.log(this.total);
-    };
     
+    cartTotal:any = 0;
+    
+    addToCartFn(price:number) {
+        this.cartTotal = this.cartTotal + price;
+        console.log(this.cartTotal);
+        localStorage.setItem('cartTotal', this.cartTotal);
+    };    
 }
-
