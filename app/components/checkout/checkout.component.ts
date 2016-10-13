@@ -13,6 +13,7 @@ export class CheckoutComponent {
     cell:string;
     checkoutFormObject:any;
     checkoutDB:any;
+    ordersDB:any = JSON.parse(localStorage.getItem('ordersDB'));
 
     constructor() {
         this.cartTotal = localStorage.getItem('cartTotal');
@@ -26,14 +27,13 @@ export class CheckoutComponent {
         };
         
         this.checkoutDB = {
-            selectedItems: localStorage.getItem('checkoutArray'),
+            selectedItems: JSON.parse(localStorage.getItem('checkoutArray')),
             checkoutFormObject: this.checkoutFormObject,
-            total: localStorage.getItem('cartTotal')
+            total: JSON.parse(localStorage.getItem('cartTotal'))
         }
-
+        
+        this.ordersDB.push(this.checkoutDB)
         // DB
-        localStorage.setItem('checkoutDB',this.checkoutDB);
-
-        console.log(this.checkoutDB);
+        localStorage.setItem('ordersDB',JSON.stringify(this.ordersDB));
     }
 }

@@ -1,3 +1,12 @@
 <h1>Orders</h1>
 
-<button type="button" class="btn btn-default">Open me!</button>
+<ul>
+    <li *ngFor="let order of ordersDB">
+        {{ order.checkoutFormObject.name }}
+        <ul>
+            <li *ngFor="let item of order.selectedItems">
+                {{ item.productName }} | R{{ item.productPrice }}
+            </li>
+        </ul>
+    </li>
+</ul>

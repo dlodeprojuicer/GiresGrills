@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
     selector: 'orders',
     templateUrl: 'orders.component.html'
 })
-export class OrdersComponent {}
+export class OrdersComponent {
+    ordersDB:any = JSON.parse(localStorage.getItem('ordersDB'));
+}
