@@ -8,12 +8,11 @@ import { HttpModule } from '@angular/http';
 import { HomeComponent }  from './components/home/home.component';
 import { MenuComponent }  from './components/menu/menu.component';
 import { OrdersComponent }  from './components/orders/orders.component';
-import { AccountComponent }  from './components/account/account.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   imports: [ HttpModule, BrowserModule, routing, FormsModule ],
-  declarations: [ AppComponent, HomeComponent , MenuComponent, OrdersComponent, AccountComponent, CheckoutComponent],
+  declarations: [ AppComponent, HomeComponent , MenuComponent, OrdersComponent, CheckoutComponent],
   bootstrap: [ AppComponent ],
   providers: [
     appRoutingProviders
