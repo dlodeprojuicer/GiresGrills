@@ -1,0 +1,52 @@
+{
+  "carsList": [
+    {
+        "make": "Toyota",
+        "model": "Hulux",
+        "km": 233,
+        "stockNo": 343,
+        "dealerName": "ABC Motors Strand",
+        "image": ""
+    },
+    {
+        "make": "Mazda",
+        "model": "Mazda CX-3",
+        "km": 839838,
+        "stockNo": 33,
+        "dealerName": "ABC Motors Somerset West",
+        "image": ""
+    },
+    {
+        "make": "MINI",
+        "model": "Cooper",
+        "km": 8898,
+        "stockNo": 3,
+        "dealerName": "ABC Motors Strand",
+        "image": ""
+    },
+    {
+        "make": "Toyota",
+        "model": "Tazz",
+        "km": 675,
+        "stockNo": 543,
+        "dealerName": "ABC Motors Somerset West",
+        "image": ""
+    },
+    {
+        "make": "Nissan",
+        "model": "X-trail",
+        "km": 34283,
+        "stockNo": 86,
+        "dealerName": "ABC Motors Somerset West",
+        "image": ""
+    },
+    {
+        "make": "Nissan",
+        "model": "Nissan GT-R",
+        "km": 233,
+        "stockNo": 343,
+        "dealerName": "ABC Motors Strand",
+        "image": ""
+    }
+  ]
+}

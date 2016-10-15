@@ -6,6 +6,7 @@ import { MenuComponent }  from './components/menu/menu.component';
 import { OrdersComponent }  from './components/orders/orders.component';
 import { AccountComponent }  from './components/account/account.component';
 import { CheckoutComponent }  from './components/checkout/checkout.component';
+import { VehicleListComponent } from './components/vehicleList/vehicleList.component';
 
 const appRoutes: Routes  = [
     {
@@ -27,6 +28,10 @@ const appRoutes: Routes  = [
     {
         path: "checkout",
         component: CheckoutComponent
+    },
+    {
+        path: "vehiclelist",
+        component: VehicleListComponent
     }
 ]
 

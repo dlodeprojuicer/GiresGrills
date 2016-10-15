@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import { MenuItemsService } from '../../services/menuItems/menuItems.service';
 
 @Component({
     moduleId: module.id,
     selector: 'menu',
-    templateUrl: 'menu.component.html',
-    providers: [MenuItemsService]
+    templateUrl: 'menu.component.html'
 })
 export class MenuComponent {    
    breakfastItems = [
