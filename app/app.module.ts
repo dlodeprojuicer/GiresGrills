@@ -11,18 +11,12 @@ import { OrdersComponent }  from './components/orders/orders.component';
 import { AccountComponent }  from './components/account/account.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 
-import { VehicleListComponent } from './components/vehicleList/vehicleList.component';
-import { AddVehicleComponent } from './components/addVehicle/addVehicle.component';
-
-import { VehicleProvider } from "./providers/vehicle.provider";
-
 @NgModule({
   imports: [ HttpModule, BrowserModule, routing, FormsModule ],
-  declarations: [ AppComponent, HomeComponent , MenuComponent, OrdersComponent, AccountComponent, CheckoutComponent, VehicleListComponent, AddVehicleComponent],
+  declarations: [ AppComponent, HomeComponent , MenuComponent, OrdersComponent, AccountComponent, CheckoutComponent],
   bootstrap: [ AppComponent ],
   providers: [
-    appRoutingProviders,
-    VehicleProvider
+    appRoutingProviders
   ]
 })
 export class AppModule {}
