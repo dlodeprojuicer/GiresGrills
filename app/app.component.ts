@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
     templateUrl: 'app.component.html'
 })
 export class AppComponent {
-    ordersArr:any = [];
-    ordersDB:any = localStorage.setItem('ordersDB',JSON.stringify(this.ordersArr));
+    _ordersArr:any = localStorage.getItem('ordersDB');
+    
+    constructor() {
+        if (!this._ordersArr) {
+            localStorage.setItem('ordersDB',JSON.stringify([]));
+        }
+    }
 }
